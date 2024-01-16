@@ -1,0 +1,19 @@
+.hero-container {
+    padding-block: clamp(60px, 20vh, 110px);
+    padding-inline:80px;
+    /* margin-right: 110px; */
+    position: relative;
+    z-index: 1;
+}
+
+.hero-img-wrapper{
+    border-radius:12rem;
+    width: clamp(200px, 100%, 400px);
+}
+
+.hero-img{
+    height: 100%!important;
+    object-fit: cover;
+    object-position: top;
+    width: clamp(200px, 100%, 400px);
+}

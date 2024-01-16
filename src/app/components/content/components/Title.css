@@ -1,0 +1,15 @@
+.section-title__border::before,
+.section-title__border::after {
+    position: absolute;
+    content: "";
+    width: 3px;
+    height: 3px;
+    background-color: #16254C;
+    border-radius: 3px;
+    inset-inline-start: -10px;
+}
+
+.section-title__border::after {
+    background-color: #FFDAA2 !important;
+    inset-inline-start: -5px;
+}

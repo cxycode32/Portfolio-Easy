@@ -1,0 +1,27 @@
+.services__wrapper .wcf__iconbox {
+    background-color: #233259;
+}
+
+.services__wrapper .wcf__iconbox:nth-child(1) {
+    background-color: #FAF2E7;
+}
+
+.services__wrapper .wcf__iconbox:nth-child(1) .icon {
+    background-color: #FFDAA2;
+}
+
+.services__wrapper .wcf__iconbox:nth-child(2) {
+    background-color: #EBE8FB;
+}
+
+.services__wrapper .wcf__iconbox:nth-child(2) .icon {
+    background-color: #9A9EFF;
+}
+
+.services__wrapper .wcf__iconbox:nth-child(3) {
+    background-color: #D8F2F1;
+}
+
+.services__wrapper .wcf__iconbox:nth-child(3) .icon {
+    background-color: #7DDED8;
+}

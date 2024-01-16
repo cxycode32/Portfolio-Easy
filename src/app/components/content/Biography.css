@@ -1,0 +1,14 @@
+.about__bio li {
+    display: grid;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.5;
+    padding-bottom: 2px;
+    grid-template-columns: 130px 40px auto;
+    color: #666666;
+}
+
+.about__bio li strong {
+    font-weight: 500;
+    color: #16254C;
+}
