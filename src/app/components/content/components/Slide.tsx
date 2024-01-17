@@ -1,26 +1,23 @@
 import Image from 'next/image'
+import { SwiperSlide } from 'swiper/react';
 import "./Slide.css"
+import 'swiper/css';
+import 'swiper/css/bundle';
 
 interface SlideProps {
-    index: string
-    ariaLabel: string
+    image: string;
     feedback: string
     name: string
     designation: string
 }
 
-export const Slide: React.FC<SlideProps> = ({ index, ariaLabel, feedback, name, designation}) => {
+export const Slide: React.FC<SlideProps> = ({ image, feedback, name, designation}) => {
     return (
-        <div
-            className="swiper-slide swiper-slide-duplicate swiper-slide-prev mr-[20px]"
-            data-swiper-slide-index={index}
-            role="group"
-            aria-label={ariaLabel}
-        >
+        <SwiperSlide className="swiper-slide mr-[20px]">
             <div className="slide">
                 <div className="picture">
                     <Image
-                        src="https://crowdytheme.com/html/info/info-demo/assets/imgs/elements/testimonial/img.jpg"
+                        src={image}
                         alt="Client Image"
                         width={400}
                         height={400}
@@ -46,6 +43,6 @@ export const Slide: React.FC<SlideProps> = ({ index, ariaLabel, feedback, name, 
                     </p>
                 </div>
             </div>
-        </div>
+        </SwiperSlide>
     )
 }

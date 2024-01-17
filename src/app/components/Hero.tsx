@@ -8,7 +8,7 @@ export const Hero: React.FC = () => {
                 <div className="flex flex-col items-center lg:grid lg:grid-cols-2 justify-between gap-5">
                     <div className='justify-self-start align-self-center'>
                         <h1 className='text-8xl font-bold mb-[16px] text-blue-950'>
-                            Cindy Test
+                            Cindy
                             <br></br>
                             Sim
                         </h1>

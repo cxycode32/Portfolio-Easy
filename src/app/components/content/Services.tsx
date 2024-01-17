@@ -1,7 +1,7 @@
 import { Title } from './components/Title'
+import { ServicesBox } from './components/ServicesBox'
 import "../Content.css"
 import "./Services.css"
-import { ServicesBox } from './components/ServicesBox'
 
 export const Services: React.FC = () => {
     return (

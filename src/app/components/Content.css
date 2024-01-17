@@ -24,7 +24,7 @@
     display: block;
     margin: 0px;
     inset: auto;
-    position: relative;
+    position: sticky;
     flex-basis: auto;
     overflow: visible;
     box-sizing: border-box;
@@ -54,4 +54,25 @@ ul,
 ol {
     padding: 0;
     margin: 0;
+}
+
+.test-container {
+    background: lightgreen;
+    height: auto !important;
+    max-height: none !important;
+    margin-top: 100px;
+}
+
+.test-child {
+    padding: 30px;
+    transition: all 500ms;
+}
+
+.test-container.on .child {
+    padding: 10px;
+}
+
+.test-content {
+    background-color: lightcoral;
+    min-height: 400px;
 }
