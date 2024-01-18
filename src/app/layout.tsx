@@ -15,7 +15,7 @@ export default function RootLayout({
     children: React.ReactNode
 }) {
     return (
-        <html lang="en" className='overscroll-none scroll-smooth h-[10000px]'>
+        <html lang="en" className='overscroll-none scroll-smooth'>
             <body className={`${inter.className} overscroll-none scroll-auto bg-white text-black`}>
                 {children}
             </body>

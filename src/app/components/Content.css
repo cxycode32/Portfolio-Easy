@@ -14,6 +14,16 @@
     gap: 80px;
 }
 
+@media only screen and (max-width: 1199px) {
+    .content-sub-container {
+        grid-template-columns: 100%;
+        gap: 50px;
+        padding-inline-start: 20px;
+        padding-inline-end: 20px;
+        margin-inline-end: 0;
+    }
+}
+
 .pin-spacer {
     order: 0;
     place-self: auto;
@@ -24,13 +34,12 @@
     display: block;
     margin: 0px;
     inset: auto;
-    position: sticky;
+    position: relative;
     flex-basis: auto;
     overflow: visible;
     box-sizing: border-box;
     width: 330px;
     height: auto !important;
-    max-height: none !important;
     padding: 0px;
 }
 

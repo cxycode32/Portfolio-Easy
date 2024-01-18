@@ -1,0 +1,4 @@
+.isSticky {
+    position: fixed !important;
+    top:0;
+}

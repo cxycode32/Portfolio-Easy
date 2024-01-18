@@ -3,7 +3,7 @@ import './Hero.css'
 
 export const Hero: React.FC = () => {
     return (
-        <div className="hero-container">
+        <div id='heroContainer' className="hero-container">
             <div className="width-limit mx-auto">
                 <div className="flex flex-col items-center lg:grid lg:grid-cols-2 justify-between gap-5">
                     <div className='justify-self-start align-self-center'>

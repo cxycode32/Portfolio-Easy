@@ -3,11 +3,11 @@ import "./Biography.css"
 
 export const Biography: React.FC = () => {
     return (
-        <section className='biography__area mt-[60px] pt-[60px]'>
+        <section className='biography__area mt-[40px] lg:mt-[60px] pt-[60px]'>
             <Title title="Biography" />
             <div className='about__content'>
                 <div className='cf-text'>
-                    <p className='mb-[20px]'>
+                    <p className='mb-[20px] text-gray-700'>
                         Hi, my name is
                         <span className='text-blue-950 font-medium'>&nbsp;Cindy Sim&nbsp;</span>
                         and I began using WordPress when I’ve spent most of my working hours for

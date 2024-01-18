@@ -1,0 +1,12 @@
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-1000%);
+    }
+}
+
+.logo-slide {
+    animation: scroll 60s linear infinite;
+}

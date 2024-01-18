@@ -1,57 +1,24 @@
-"use client"
-
-import { gsap } from 'gsap'
-import { useEffect } from 'react'
-import { ScrollTrigger } from "gsap/ScrollTrigger"
 import { Sidebar } from './content/Sidebar'
 import { Biography } from './content/Biography'
 import { Services } from './content/Services'
 import { Testimonial } from './content/Testimonial'
+import { Clients } from './content/Clients'
+import { Awards } from './content/Awards'
 import './Content.css'
 
 export const Content: React.FC = () => {
-
-    gsap.registerPlugin(ScrollTrigger);
-
-    useEffect(() => {
-        // ScrollTrigger.create({
-        //     trigger: '#pin-spacer',
-        //     start: 'top top',
-        //     end: 'bottom 1000px',
-        //     pin: '#sidebar'
-        // })
-
-        ScrollTrigger.create({
-            trigger: document.querySelector('#section'),
-            start: 'top top',
-            endTrigger: 'html',
-            end: 'bottom top',
-            pin: document.querySelector('#container'),
-            pinSpacing: false,
-            toggleClass: 'on',
-            markers: true
-        })
-    }, [])
-
     return (
-        <div className='content-container'>
+        <div id='contentContainer' className='content-container'>
             <div className='content-sub-container'>
-                <div id='pin-spacer' className='pin-spacer'>
-                    <div id="sidebar">
-                        <Sidebar />
-                    </div>
+                <div id='pinSpacer'>
+                    <Sidebar />
                 </div>
-                <div>
+                <div className='col-start-2 col-end-3'>
                     <Biography />
                     <Services />
                     <Testimonial />
-                    <section id="section" className='clients__area pt-[60px] w-[320px] h-[320px]'>
-                        <div id="container" className="test-container">
-                            <div className="test-child z-10">Child</div>
-                        </div>
-                        <div className="test-content">Content</div>
-                    </section>
-                    <section className='awards__area pt-[60px]'></section>
+                    <Clients />
+                    <Awards />
                     <div className='container-area'></div>
                     <section className='coding__area pt-[60px]'></section>
                     <div className='container-area'></div>

@@ -1,0 +1,15 @@
+.clients__wrapper {
+    border: 1px solid lightgray;
+    border-radius: 90px;
+    padding: 26px 40px;
+}
+
+.swiper,
+.swiper-container {
+    direction: 1tr;
+}
+
+.swiper-wrapper {
+    transition-duration: 6000ms;
+    transition-timing-function: linear;
+}
