@@ -10,6 +10,8 @@
 }
 
 .swiper-wrapper {
+    justify-content: center;
+    align-items: center;
     transition-duration: 6000ms;
     transition-timing-function: linear;
 }

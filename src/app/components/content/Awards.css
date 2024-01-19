@@ -1,0 +1,5 @@
+@media (width >575px) {
+    .awards__wrapper {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}

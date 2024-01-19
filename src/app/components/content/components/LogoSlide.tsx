@@ -9,7 +9,7 @@ interface LogoSlideProps {
 
 export const LogoSlide: React.FC<LogoSlideProps> = ({ img }) => {
     return (
-        <div className="logo-slide swiper-slide w-fit mr-[120px]">
+        <div className="logo-slide swiper-slide">
             <Image
                 src={img}
                 alt=""

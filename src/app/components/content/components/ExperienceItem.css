@@ -1,0 +1,29 @@
+.experience__item {
+    padding: 0 0;
+    padding-inline-start: 30px;
+    position: relative;
+    margin-top: 40px;
+}
+
+.experience__item:first-child {
+    margin-top: 0;
+}
+
+.experience__item::before {
+    content: url(	https://crowdytheme.com/html/info/info-demo/assets/imgs/shape/solid-line-light.png);
+    position: absolute;
+    inset-inline-start: 4px;
+    top: 0;
+    filter: brightness(0.2);
+}
+
+.experience__item::after {
+    content: "";
+    position: absolute;
+    inset-inline-start: 0;
+    top: 23px;
+    width: 9px;
+    height: 9px;
+    background-color: #9A9EFF;
+    border-radius: 50%;
+}

@@ -8,5 +8,7 @@
 }
 
 .logo-slide {
+    width: fit-content;
+    margin-right: 120px;
     animation: scroll 60s linear infinite;
 }

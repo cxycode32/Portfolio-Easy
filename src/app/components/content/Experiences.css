@@ -1,0 +1,5 @@
+@media (width > 575px) {
+    .experiences-area-wrapper {
+        grid-template-columns: 1fr 1fr;
+    }
+}
