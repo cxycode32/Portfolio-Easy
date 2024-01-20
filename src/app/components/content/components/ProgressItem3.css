@@ -1,0 +1,15 @@
+.progress-item-3 {
+    grid-template-columns: auto auto;
+}
+
+.dot-progress {
+    --percentage: var(--value);
+    --secondary: #cfcfcf;
+
+    width: 110px;
+    height: 13px;
+    -webkit-mask: radial-gradient(circle closest-side, #000 94%, rgba(0, 0, 0, 0)) 0/20%;
+    background: radial-gradient(var(--primary) 0 0) 0/0% no-repeat var(--secondary);
+    background-size: calc(var(--percentage) * 1%);
+    animation: progress 3s linear;
+}

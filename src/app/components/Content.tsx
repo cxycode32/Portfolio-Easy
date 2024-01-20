@@ -5,6 +5,8 @@ import { Testimonial } from './content/Testimonial'
 import { Clients } from './content/Clients'
 import { Awards } from './content/Awards'
 import { Experiences } from './content/Experiences'
+import { Coding } from './content/Coding'
+import { Skills } from './content/Skills'
 import './Content.css'
 
 export const Content: React.FC = () => {
@@ -14,7 +16,7 @@ export const Content: React.FC = () => {
                 <div id='pinSpacer'>
                     <Sidebar />
                 </div>
-                <div className='col-start-2 col-end-3'>
+                <div className='content-wrapper'>
                     <Biography />
                     <Services />
                     <Testimonial />
@@ -23,8 +25,10 @@ export const Content: React.FC = () => {
                     <div className='container-area'>
                         <Experiences />
                     </div>
-                    <section className='coding__area pt-[60px]'></section>
-                    <div className='container-area'></div>
+                    <Coding />
+                    <div className='container-area'>
+                        <Skills />
+                    </div>
                     <section className='knowledge__area pt-[60px]'></section>
                     <section className='work__area pt-[60px]'></section>
                     <section className='pricing__area pt-[60px]'></section>
