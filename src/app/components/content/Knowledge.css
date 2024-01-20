@@ -1,0 +1,5 @@
+@media (width > 575px) {
+    .knowledge__wrapper {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}

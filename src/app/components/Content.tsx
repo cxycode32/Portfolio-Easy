@@ -7,6 +7,7 @@ import { Awards } from './content/Awards'
 import { Experiences } from './content/Experiences'
 import { Coding } from './content/Coding'
 import { Skills } from './content/Skills'
+import { Knowledge } from './content/Knowledge'
 import './Content.css'
 
 export const Content: React.FC = () => {
@@ -29,7 +30,7 @@ export const Content: React.FC = () => {
                     <div className='container-area'>
                         <Skills />
                     </div>
-                    <section className='knowledge__area pt-[60px]'></section>
+                    <Knowledge />
                     <section className='work__area pt-[60px]'></section>
                     <section className='pricing__area pt-[60px]'></section>
                     <section className='blog__area pt-[60px]'></section>

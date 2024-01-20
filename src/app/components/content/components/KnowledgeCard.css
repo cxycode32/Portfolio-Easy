@@ -1,0 +1,42 @@
+.knowledge__card {
+    background-color: #F5F3ED;
+    padding: 15px;
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.knowledge__card .icon {
+    width: 45px;
+    height: 45px;
+    background-color: #FFDAA2;
+    border-radius: 8px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.knowledge__card:nth-child(1) .icon {
+    background-color: #9A9EFF;
+}
+
+.knowledge__card:nth-child(2) .icon {
+    background-color: #FFDAA2;
+}
+
+.knowledge__card:nth-child(3) .icon {
+    background-color: #7DDED8;
+}
+
+.knowledge__card:nth-child(4) .icon {
+    background-color: #EE94C4;
+}
+
+.knowledge__card:nth-child(5) .icon {
+    background-color: #B3DA83;
+}
+
+.knowledge__card:nth-child(6) .icon {
+    background-color: #F9B099;
+}
