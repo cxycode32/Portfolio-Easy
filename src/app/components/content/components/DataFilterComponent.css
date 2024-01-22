@@ -1,0 +1,59 @@
+.wcf__portfolio button {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.5;
+    text-transform: capitalize;
+    position: relative;
+    color: #555555;
+}
+
+.wcf__portfolio a,
+.wcf__portfolio button {
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.wcf__portfolio button:hover {
+    color: #16254C;
+}
+
+.wcf__portfolio button::before {
+    position: absolute;
+    content: "";
+    width: 0%;
+    height: 1px;
+    left: 0;
+    bottom: 0;
+    background-color: #16254C;
+    transition: all 0.3s;
+}
+
+.wcf__portfolio button:hover::before {
+    width: 100%;
+}
+
+.wcf__portfolio button span {
+    display: none;
+}
+
+.wcf__portfolio button span {
+    display: none;
+    font-size: 12px;
+    line-height: 1.8;
+    text-align: right;
+    color: #999999;
+    transition: all 0.3s;
+}
+
+.wcf__portfolio button:hover span {
+    color: #16254C;
+}
+
+.active {
+    font-weight: 500 !important;
+    color: #555555 !important;
+}
+
+.wcf__portfolio button.active::before {
+    width: 100%;
+}
