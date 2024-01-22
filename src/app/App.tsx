@@ -44,7 +44,6 @@ export default function App() {
         <main className="inline-block w-full">
             <Hero />
             <Content />
-            <Test />
         </main>
     )
 }

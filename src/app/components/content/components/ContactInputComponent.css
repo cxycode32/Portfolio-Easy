@@ -1,0 +1,24 @@
+@media (width > 575px) {
+    .input-field:nth-child(1),
+    .input-field:nth-child(4) {
+        grid-column: span 2;
+    }
+}
+
+.input-field label {
+    font-size: 16px;
+    font-weight: 500;
+    color: #16254C;
+    margin-bottom: 8px;
+    line-height: 1.62;
+}
+
+.input-field input {
+    background-color: #F5F3ED;
+    outline: 0;
+    border: 0;
+    padding: 13px 20px;
+    border-radius: 10px;
+    width: 100%;
+    color: #16254C;
+}
