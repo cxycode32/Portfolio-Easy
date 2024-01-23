@@ -52,8 +52,8 @@ export default function App() {
     }, []);
 
     return (
-        <div>
-            <header id='header' className={`header ${isHeaderVisible ? 'header-visible' : 'header-hidden'}`}>
+        <main className='darkMode'>
+            <header id='header' className={`header ${isHeaderVisible && 'header-visible'}`}>
                 <Header onCloseClick={handleCloseClick} />
             </header>
             <div className='header-2 d-xl-none'>
@@ -63,6 +63,6 @@ export default function App() {
                 <Hero />
                 <Content />
             </main>
-        </div>
+        </main>
     )
 }
