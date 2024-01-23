@@ -28,7 +28,7 @@
 
 @media only screen and (max-width: 1199px) {
     .header__logo {
-        background: var(--dark-blue-2);
+        background: var(--primary-color);
     }
 }
 
@@ -37,7 +37,7 @@
     cursor: pointer;
 }
 
-.resume-menu > ul {
+.resume-menu>ul {
     display: flex;
     flex-direction: column;
 }
@@ -60,8 +60,19 @@
     color: var(--dark-blue);
 }
 
+@media only screen and (max-width: 1399px) {
+    .resume-menu li a {
+        padding: 12px 5px;
+        font-size: 10px;
+    }
+}
+
 .resume-menu li a.active {
-    color: var(--purple);
+    color: var(--purple) !important;
+}
+
+.resume-menu li a.active .menu-item {
+    filter: brightness(4);
 }
 
 .resume-menu li a::after {

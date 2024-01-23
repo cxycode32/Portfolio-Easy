@@ -68,3 +68,7 @@ body {
     height: 1271px;
     padding: 0px;
 }
+
+button {
+    cursor: pointer;
+}

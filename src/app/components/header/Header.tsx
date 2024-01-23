@@ -1,9 +1,53 @@
 import Image from 'next/image'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faX } from '@fortawesome/free-solid-svg-icons'
+import { useState } from 'react'
 import './Header.css'
 
-export const Header: React.FC = () => {
+interface HeaderProps {
+    onCloseClick: () => void;
+}
+
+export const Header: React.FC<HeaderProps> = ({ onCloseClick }) => {
+
+    const [activeMenuItem, setActiveMenuItem] = useState(null);
+
+    const handleMenuClick = (index: any) => {
+        setActiveMenuItem(index);
+    };
+
+    const menuItems = [
+        {
+            id: 1,
+            img: "https://crowdytheme.com/html/info/info-demo/assets/imgs/resume/icon-home.png",
+            href: "#heroContainer",
+            label: "home"
+        },
+        {
+            id: 2,
+            img: "https://crowdytheme.com/html/info/info-demo/assets/imgs/resume/icon-user.png",
+            href: "#biographyContainer",
+            label: "about"
+        },
+        {
+            id: 3,
+            img: "https://crowdytheme.com/html/info/info-demo/assets/imgs/resume/icon-resume.png",
+            href: "#experiencesContainer",
+            label: "resume"
+        },
+        {
+            id: 4,
+            img: "https://crowdytheme.com/html/info/info-demo/assets/imgs/resume/icon-briefcase.png",
+            href: "#workContainer",
+            label: "works"
+        },
+        {
+            id: 5,
+            img: "https://crowdytheme.com/html/info/info-demo/assets/imgs/resume/icon-plane.png",
+            href: "#contactContainer",
+            label: "contact"
+        },
+    ];
 
     return (
         <div className='pin-spacer'>
@@ -17,68 +61,36 @@ export const Header: React.FC = () => {
                             height={50}
                         />
                     </span>
-                    <span className='offcanvas-close d-xl-none'>
+                    <span
+                        className='offcanvas-close d-xl-none'
+                        onClick={onCloseClick}
+                    >
                         <FontAwesomeIcon icon={faX} />
                     </span>
                 </div>
                 <div className='header__nav m-5 mb-11'>
                     <nav className='resume-menu'>
                         <ul>
-                            <li>
-                                <a href="#heroContainer">
-                                    <Image
-                                        src="https://crowdytheme.com/html/info/info-demo/assets/imgs/resume/icon-home.png"
-                                        alt="icon"
-                                        width={20}
-                                        height={20}
-                                    />
-                                    home
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#biographyContainer">
-                                    <Image
-                                        src="https://crowdytheme.com/html/info/info-demo/assets/imgs/resume/icon-user.png"
-                                        alt="icon"
-                                        width={20}
-                                        height={20}
-                                    />
-                                    about
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#experiencesContainer">
-                                    <Image
-                                        src="https://crowdytheme.com/html/info/info-demo/assets/imgs/resume/icon-resume.png"
-                                        alt="icon"
-                                        width={20}
-                                        height={20}
-                                    />
-                                    resume
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#workContainer">
-                                    <Image
-                                        src="https://crowdytheme.com/html/info/info-demo/assets/imgs/resume/icon-briefcase.png"
-                                        alt="icon"
-                                        width={20}
-                                        height={20}
-                                    />
-                                    works
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#contactContainer">
-                                    <Image
-                                        src="https://crowdytheme.com/html/info/info-demo/assets/imgs/resume/icon-plane.png"
-                                        alt="icon"
-                                        width={20}
-                                        height={20}
-                                    />
-                                    contact
-                                </a>
-                            </li>
+                            {menuItems.map((menuItem) => {
+                                return (
+                                    <li key={menuItem.id}>
+                                        <a
+                                            href={menuItem.href}
+                                            className={activeMenuItem === menuItem.id ? 'active' : ''}
+                                            onClick={() => handleMenuClick(menuItem.id)}
+                                        >
+                                            <Image
+                                                src={menuItem.img}
+                                                alt="icon"
+                                                width={20}
+                                                height={20}
+                                                className='menu-item'
+                                            />
+                                            {menuItem.label}
+                                        </a>
+                                    </li>
+                                )
+                            })}
                         </ul>
                     </nav>
                 </div>

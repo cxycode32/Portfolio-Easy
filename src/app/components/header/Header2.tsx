@@ -1,7 +1,11 @@
 import Image from 'next/image'
 import './Header2.css'
 
-export const Header2: React.FC = () => {
+interface Header2Props {
+    onMenuBarClick: () => void;
+}
+
+export const Header2: React.FC<Header2Props> = ({ onMenuBarClick }) => {
 
     return (
         <div className='header-2__wrapper'>
@@ -13,7 +17,10 @@ export const Header2: React.FC = () => {
                     height={50}
                 />
             </div>
-            <button className='header-2__offcanvas-btn mr-5'>
+            <button
+                className='header-2__offcanvas-btn mr-5'
+                onClick={onMenuBarClick}
+            >
                 <Image
                     src="https://crowdytheme.com/html/info/info-demo/assets/imgs/logo/menubar.png"
                     alt="image"

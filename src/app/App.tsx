@@ -1,6 +1,6 @@
 "use client"
 
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import { Header } from './components/header/Header';
 import { Header2 } from './components/header/Header2';
 import { Hero } from "./components/hero/Hero";
@@ -8,6 +8,16 @@ import { Content } from './components/content/Content'
 import './App.css';
 
 export default function App() {
+
+    const [isHeaderVisible, setHeaderVisibility] = useState(false);
+
+    const handleMenuBarClick = () => {
+        setHeaderVisibility(true);
+    }
+
+    const handleCloseClick = () => {
+        setHeaderVisibility(false);
+    }
 
     const handleScroll = () => {
         var heroContainer = document.getElementById("heroContainer");
@@ -43,11 +53,11 @@ export default function App() {
 
     return (
         <div>
-            <header id='header' className='header'>
-                <Header />
+            <header id='header' className={`header ${isHeaderVisible ? 'header-visible' : 'header-hidden'}`}>
+                <Header onCloseClick={handleCloseClick} />
             </header>
             <div className='header-2 d-xl-none'>
-                <Header2 />
+                <Header2 onMenuBarClick={handleMenuBarClick} />
             </div>
             <main className="inline-block w-full">
                 <Hero />

@@ -7,7 +7,6 @@
     position: fixed;
     width: 110px;
     height: 100%;
-    inset-inline-end: 0;
     top: 0;
     z-index: 2;
     padding: 0;
@@ -20,6 +19,20 @@
     .header {
         inset-inline-end: -110px;
     }
+}
+
+@media only screen and (min-width: 1199px) {
+    .header {
+        inset-inline-end: 0px !important;
+    }
+}
+
+.header-visible {
+    inset-inline-end: 0;
+}
+
+.header-hidden {
+    inset-inline-end: -110px;
 }
 
 .header-2 {
