@@ -8,7 +8,7 @@ export const Services: React.FC = () => {
         <section className='services__area pt-[60px]'>
             <Title title="My Services" />
             <div className='container-area'>
-                <div className='services__wrapper grid gap-[15px] grid-cols-3'>
+                <div className='services__wrapper grid gap-[15px]'>
                     <ServicesBox
                         icon="https://crowdytheme.com/html/info/info-demo/assets/imgs/resume/service-icon-1.png"
                         title="Design"

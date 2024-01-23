@@ -1,9 +1,10 @@
 "use client"
 
 import { useEffect } from 'react';
-import { Hero } from "./components/Hero";
-import { Content } from './components/Content'
-import { Test } from "./components/Test";
+import { Header } from './components/header/Header';
+import { Header2 } from './components/header/Header2';
+import { Hero } from "./components/hero/Hero";
+import { Content } from './components/content/Content'
 import './App.css';
 
 export default function App() {
@@ -15,18 +16,18 @@ export default function App() {
 
         // scroll past hero container
         if (pinSpacer && heroContainer && window.scrollY > (heroContainer.offsetTop + heroContainer.offsetHeight)) {
-            pinSpacer.classList.add("isSticky");
+            pinSpacer.classList.add("sticky");
         } else if (pinSpacer && heroContainer && window.scrollY < (heroContainer.offsetTop + heroContainer.offsetHeight)) {
-            pinSpacer.classList.remove("isSticky");
+            pinSpacer.classList.remove("sticky");
         }
 
         // scroll past content container
-        if (pinSpacer!.classList.contains("isSticky")) {
+        if (pinSpacer!.classList.contains("sticky")) {
             let pinSpacerBottom = window.scrollY + pinSpacer!.offsetTop + pinSpacer!.offsetHeight
             let contentContainerBottom = contentContainer!.offsetTop + contentContainer!.offsetHeight
 
             if (pinSpacerBottom > contentContainerBottom) {
-                pinSpacer!.classList.remove("isSticky");
+                pinSpacer!.classList.remove("sticky");
             }
         }
     };
@@ -41,9 +42,17 @@ export default function App() {
     }, []);
 
     return (
-        <main className="inline-block w-full">
-            <Hero />
-            <Content />
-        </main>
+        <div>
+            <header id='header' className='header'>
+                <Header />
+            </header>
+            <div className='header-2 d-xl-none'>
+                <Header2 />
+            </div>
+            <main className="inline-block w-full">
+                <Hero />
+                <Content />
+            </main>
+        </div>
     )
 }

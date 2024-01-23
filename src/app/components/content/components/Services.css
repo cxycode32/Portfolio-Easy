@@ -1,3 +1,9 @@
+@media (min-width: 1200px) {
+    .services__wrapper {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
 .services__wrapper .wcf__iconbox {
     background-color: #233259;
 }

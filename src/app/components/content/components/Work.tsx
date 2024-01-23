@@ -115,7 +115,7 @@ export const Work: React.FC = () => {
     const pageNumbers = Array.from({ length: totalPages }, (_, index) => index + 1);
 
     return (
-        <section className='work__area pt-[60px]'>
+        <section id="workContainer" className='work__area pt-[60px]'>
             <div className='container-area'>
                 <div className='work__container grid justify-between gap-x-50 gap-y-30 mb-[40px]'>
                     <Title title="Work" />

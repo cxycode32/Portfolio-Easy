@@ -3,7 +3,7 @@ import './Experiences.css'
 
 export const Experiences: React.FC = () => {
     return (
-        <div className='experiences-area-wrapper grid gap-x-12'>
+        <div id="experiencesContainer" className='experiences-area-wrapper grid gap-x-12'>
             <ExperienceComponent
                 title="Experience"
                 expTime={["2017 - 2019", "2017 - 2019", "2017 - 2019"]}

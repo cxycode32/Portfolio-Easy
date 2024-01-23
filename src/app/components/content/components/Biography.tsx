@@ -3,7 +3,7 @@ import "./Biography.css"
 
 export const Biography: React.FC = () => {
     return (
-        <section className='biography__area mt-[40px] lg:mt-[60px] pt-[60px]'>
+        <section id="biographyContainer" className='biography__area mt-[40px] lg:mt-[60px] pt-[60px]'>
             <Title title="Biography" />
             <div className='about__content'>
                 <div className='cf-text'>

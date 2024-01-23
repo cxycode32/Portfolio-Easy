@@ -6,7 +6,7 @@ import './Contact.css'
 
 export const Contact: React.FC = () => {
     return (
-        <section className='contact__area pt-[60px] pb-[60px]'>
+        <section id="contactContainer" className='contact__area pt-[60px] pb-[60px]'>
             <Title title="Get in touch" />
             <div className='container-area mb-[60px]'>
                 <div className='contact-links__wrapper grid gap-[15px]'>
@@ -61,18 +61,7 @@ export const Contact: React.FC = () => {
                 </form>
             </div>
             <div className='location__map'>
-                <a
-                    href='https://www.google.com/maps/@23.7985427,90.3641058,15z?entry=ttu'
-                    target='_blank'
-                >
-                    <Image
-                        src="https://crowdytheme.com/html/info/info-demo/assets/imgs/resume/map.png"
-                        alt="map location"
-                        width={500}
-                        height={500}
-                        className='map'
-                    />
-                </a>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15936.760228883299!2d101.69796545!3d3.0436824!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31cc4ab0b838cf87%3A0x3f20a752d968aee0!2sThe%20Sanderson!5e0!3m2!1sen!2smy!4v1705919935440!5m2!1sen!2smy" loading="lazy" ></iframe>
             </div>
         </section>
     )

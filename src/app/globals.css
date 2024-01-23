@@ -7,6 +7,18 @@
     --background-start-rgb: 214, 219, 220;
     --background-end-rgb: 255, 255, 255;
     --width-limit: clamp(1200px, 80vw, 1440px);
+    --white: #ffffff;
+    --white-2: #E9E9E9;
+    --primary-color: #FFDAA3;
+    --primary-color-2: #FFDAA2;
+    --light-orange: #FAF2E7;
+    --dark-blue: #16254C;
+    --dark-blue-2: #30406A;
+    --purple: #9A9EFF;
+    --fs-1: 12px;
+    --fw-1: 400;
+    --fw-2: 500;
+    --fw-3: 600;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -23,4 +35,36 @@ body {
 
 .width-limit {
     max-width: var(--width-limit);
+}
+
+.d-none {
+    display: none !important;
+}
+
+@media (min-width: 1200px) {
+    .d-xl-none {
+        display: none !important;
+    }
+    .d-xl-block {
+        display: block !important;
+    }
+}
+
+.pin-spacer {
+    order: 0;
+    place-self: auto;
+    grid-area: auto;
+    z-index: auto;
+    float: none;
+    flex-shrink: 1;
+    display: flex;
+    margin: 0px;
+    inset: 0px 0px 8802.41px;
+    position: absolute;
+    flex-basis: auto;
+    overflow: visible;
+    box-sizing: border-box;
+    width: 110px;
+    height: 1271px;
+    padding: 0px;
 }

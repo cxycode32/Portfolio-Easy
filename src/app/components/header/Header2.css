@@ -1,0 +1,20 @@
+.header-2__wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.header-2__logo {
+    width: 80px;
+    height: 80px;
+    border-right: 1px solid var(--dark-blue-2);
+    aspect-ratio: 100/100;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    border-color: var(--white-2);
+}
+
+.header-2__offcanvas-btn .menubar {
+    filter: brightness(0.2);
+}

@@ -11,4 +11,5 @@
 .about__bio li strong {
     font-weight: 500;
     color: #16254C;
+    word-break: break-all;
 }
